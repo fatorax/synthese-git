@@ -177,6 +177,50 @@ a {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
+/* ---------- Formulaire ---------- */
+.form {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-bg-alt);
+}
+
+.form h2 {
+  margin-top: 0;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font: inherit;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(74, 144, 194, 0.25);
+}
+
+.form .btn {
+  width: 100%;
+}
+
 /* ---------- Pied de page ---------- */
 .site-footer {
   padding: 1.25rem 0;
