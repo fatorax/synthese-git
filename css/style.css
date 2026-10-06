@@ -1,0 +1,210 @@
+/* ==========================================================
+   SDVB3 - Feuille de style commune à toutes les pages
+   ========================================================== */
+
+/* ---------- Variables ---------- */
+:root {
+  --color-primary: #1f4e79;
+  --color-primary-dark: #163a5a;
+  --color-accent: #4a90c2;
+  --color-text: #222;
+  --color-muted: #5a6470;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f3f6f9;
+  --color-border: #dde3ea;
+  --radius: 8px;
+  --max-width: 1000px;
+  --font: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.25;
+  color: var(--color-primary);
+}
+
+a {
+  color: var(--color-primary);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section {
+  padding: 2.5rem 1rem;
+}
+
+/* ---------- En-tête et navigation ---------- */
+.site-header {
+  background: var(--color-primary);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-list a {
+  display: block;
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius);
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-list a:hover,
+.nav-list a:focus-visible,
+.nav-list a[aria-current="page"] {
+  background: var(--color-primary-dark);
+}
+
+/* ---------- Bandeau d'accueil ---------- */
+.hero {
+  padding: 3.5rem 0;
+  text-align: center;
+  background: var(--color-bg-alt);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hero h1 {
+  margin-top: 0;
+  font-size: 2.2rem;
+}
+
+.hero-text {
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+  color: var(--color-muted);
+  font-size: 1.1rem;
+}
+
+/* ---------- Bouton ---------- */
+.btn {
+  display: inline-block;
+  padding: 0.65rem 1.4rem;
+  border: none;
+  border-radius: var(--radius);
+  background: var(--color-primary);
+  color: #fff;
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  background: var(--color-primary-dark);
+}
+
+/* ---------- Cartes ---------- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  display: block;
+  padding: 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  color: var(--color-text);
+  text-decoration: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card p {
+  margin-bottom: 0;
+  color: var(--color-muted);
+}
+
+.card:hover,
+.card:focus-visible {
+  border-color: var(--color-accent);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* ---------- Pied de page ---------- */
+.site-footer {
+  padding: 1.25rem 0;
+  background: var(--color-primary-dark);
+  color: #fff;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.site-footer p {
+  margin: 0.25rem 0;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 600px) {
+  .header-inner {
+    flex-direction: column;
+  }
+
+  .nav-list {
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 2.5rem 0;
+  }
+
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+}
